@@ -52,10 +52,11 @@ button {
 
 .container-header {
   width: 100%;
+  height: 72px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 72px;
+  /* align-items: center; */
 }
 
 .navigation {
@@ -119,7 +120,7 @@ button {
   margin-left: auto;
   margin-bottom: 24px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-  fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu-close-button:hover,
@@ -127,7 +128,6 @@ button {
   background-color: #404bbf;
   fill: #f4f4fd;
 }
-
 
 .mob-menu-container:not(:first-child) {
   display: flex;
@@ -620,8 +620,6 @@ button {
 
 /* form */
 
-
-
 .is-hidden {
   visibility: hidden;
   opacity: 0;
@@ -868,10 +866,20 @@ button {
     width: 768px;
   }
 
-  .menu-btn {
+  .container-header {
+    align-items: center;
+  }
+  .mob-menu-container:not(:first-child) {
     display: none;
   }
 
+  .menu-btn {
+    display: none;
+  }
+  .mob-menu-container  {
+    display: none;
+  }
+  
   .navigation-list {
     display: flex;
     flex-direction: row;
@@ -920,7 +928,6 @@ button {
     justify-content: center;
     align-items: flex-start;
     gap: 12px;
-    padding: 16px 0;
   }
 
   .contacts-item {
@@ -973,14 +980,15 @@ button {
   }
 
   /* second-section */
-
+.second-section .container {
+  width: 608px;
+}
   .second-section-title {
     margin: 0 0 72px 0;
   }
 
   .second-section-list {
-    width: 552px;
-    margin: 0 auto;
+   width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -995,7 +1003,9 @@ button {
   }
 
   /* third-section */
-
+  .third-section-img-box img {
+  height: 300px;
+}
   .third-section-list {
     width: 736px;
     display: flex;
@@ -1057,6 +1067,7 @@ button {
   }
   .input-e-mail {
     width: 265px;
+    margin-bottom: 0;
   }
 
   /* form */
@@ -1128,6 +1139,7 @@ button {
 
   .first-section-list-item-title {
     font-size: 20px;
+    font-weight: 500;
     text-align: start;
   }
 
@@ -1156,6 +1168,11 @@ button {
   .third-section-list-item {
     width: calc((100% - 48px) / 3);
   }
+  .third-section-img-box {
+    height: 300px;
+    width: 360px;
+    overflow: hidden;
+  }
 
   /* footer */
 
@@ -1181,9 +1198,14 @@ button {
   .footer-social-media-box {
     margin-right: 80px;
   }
-
+  .subscribe-label {
+    margin-bottom: 16px;
+  }
   .footer-subscribe-box {
-    margin-left: 0;
+    display: block;
+  }
+  .input-e-mail {
+    margin: 0;
   }
 }
 
